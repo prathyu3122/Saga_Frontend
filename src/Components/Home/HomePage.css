@@ -1,0 +1,34 @@
+.home-container {
+    height: 100vh;
+    padding: 30px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+
+.logo-img {
+    height: 90px;
+    border-radius: 100px;
+}
+
+.btn-primary {
+    background-color: #164a8a;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Roboto";
+}
+
+.btn-primary:hover {
+    background-color: #1f6ccc;
+    border: none;
+}
+
+.blog-img-container {
+    width: 20vw;
+}
