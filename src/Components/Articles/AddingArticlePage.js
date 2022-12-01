@@ -19,14 +19,22 @@ export default function AddingArticlePage() {
             "genre" : "",
             "imageurl" : "",
             "publishing_date" : "",
-            "title": "",
-            "subtitle" : ""
+            "title": ""
         }
     ]);
+
+    const [message, setMessage] = useState("");
 
     function changeDetails(e) {
         let val = e.target.value;
         setArticles({...Articles, [e.target.name]: val})
+    }
+
+    const onSubmission = () => {
+        let addingFormContainerEl = document.getElementById('addingFormContainer');
+        addingFormContainerEl.classList.toggle('d-none');
+        let messageContainerEl = document.getElementById('messageContainer');
+        messageContainerEl.classList.toggle('d-none');
     }
 
     const insertRecord = async (e) => {
@@ -34,10 +42,17 @@ export default function AddingArticlePage() {
         
     }
 
+    function getMessage() {
+        fetch("http://localhost:8080/saga/addarticle")
+        .then(result => {
+            setMessage(result);
+        })
+    }
+
     return (
         <div className="">
             <NavBar />
-            <div className="addingForm-container">
+            <div className="addingForm-container" id="addingFormContainer">
                 <h1>Add your article here &nbsp;
                 <FontAwesomeIcon icon={faArrowDown} />
                 </h1>
@@ -45,10 +60,6 @@ export default function AddingArticlePage() {
                     <div className="form-group m-4">
                         <label for="title">Title:</label>
                         <input type="text" className="form-control" id="title" name="title" value={Articles.title} onChange={(e) => changeDetails(e)} />
-                    </div>
-                    <div className="form-group m-4">
-                        <label for="subtitle">Sub Title:</label>
-                        <input type="text" id="subtitle" className="form-control" name="subtitle" value={Articles.subtitle} onChange={(e) => changeDetails(e)} />
                     </div>
                     <div className="form-group m-4">
                         <label for="genre">Genre:</label>
@@ -74,6 +85,9 @@ export default function AddingArticlePage() {
                     
                     <input className="btn btn-primary add-button" type="button" name="insert" value="Add Article +" onClick={(e) => insertRecord(e)} />
                 </form>
+            </div>
+            <div id="messageContainer" className="d-none" onClick={onSubmission}>
+                <h1>{message}</h1>
             </div>
             <div className="d-flex flex-row justify-content-start m-3">
                 <Button variant="primary" type="button">
