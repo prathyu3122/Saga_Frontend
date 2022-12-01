@@ -1,14 +1,15 @@
-/* .navigation-container {
+.navigation-container {
     display: flex;
-    flex-direction: column;
-    justify-content: right;
-} */
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    float: right;
 }
 
 li {

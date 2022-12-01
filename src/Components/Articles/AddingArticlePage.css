@@ -1,0 +1,42 @@
+.addingForm-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+label {
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 80%;
+    align-self: center;
+    background-color: #bbd7f8;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    border: #5d88b9 2px solid;
+}
+
+.form-group {
+   text-align: left;
+}
+
+
+h1 {
+    font-family: cursive;
+    color: #133c6e;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    font-weight: bold;
+    font-family: "Roboto";
+    margin: 20px;
+}
