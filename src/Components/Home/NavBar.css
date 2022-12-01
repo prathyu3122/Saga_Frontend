@@ -1,22 +1,18 @@
-.navigation-container {
+/* .navigation-container {
     display: flex;
     flex-direction: column;
     justify-content: right;
-}
+} */
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    
 }
 
 li {
     float: left;
-    align-items: center;
 }
 
 li a {

@@ -3,6 +3,7 @@
     padding: 30px;
 }
 
+
 .header-container {
     display: flex;
     flex-direction: row;
@@ -18,9 +19,11 @@
 .btn-primary {
     background-color: #164a8a;
     border: none;
-    border-radius: 25px;
+    border-radius: 40px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-family: "Roboto";
 }
 
@@ -29,6 +32,8 @@
     border: none;
 }
 
-.blog-img-container {
-    width: 20vw;
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
