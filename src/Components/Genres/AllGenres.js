@@ -4,6 +4,7 @@ import './AllGenres.css'
 import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router';
 
 export default function AllGenres() {
    
@@ -17,6 +18,8 @@ export default function AllGenres() {
         });
 
     }, [])
+
+    const viewArticlesOfGenre = useNavigate();
 
 
     return (
@@ -34,9 +37,9 @@ export default function AllGenres() {
                         <img className="card-img-top" src={record.gimage} alt="Card Image" />
                         <div className="card-body">
                             <h5 className="card-title">{record.gname}</h5>
-                            <a href="" className="btn btn-primary">View Articles &nbsp;
+                            <button className="btn btn-primary" onClick={() => {viewArticlesOfGenre('/genre-articles', {state: {genreName: record.gname}})}}>View Articles &nbsp;
                             <FontAwesomeIcon icon={faArrowRight} />
-                            </a>
+                            </button>
                         </div>
                     </div>
                     ))}

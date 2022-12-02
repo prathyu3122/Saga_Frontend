@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-import './AllArticles.css'
+import '../Articles/AllArticles.css'
 import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate } from 'react-router';
+import { useLocation } from 'react-router';
 
-export default function AllArticles() {
+export default function GenrePage() {
    
     const [articlesrecord, setArticlesrecord] = useState([]);
+    const {state} = useLocation();
+    console.log(state.genreName);
 
     useEffect(() => {
-        fetch("http://localhost:8080/saga/all_articles")
+        fetch("http://localhost:8080/saga/article/" + state.genreName)
         .then(articles => articles.json())
         .then((articles) => {
             console.log(articles);
@@ -20,27 +21,12 @@ export default function AllArticles() {
 
     }, []);
 
-    const [newArticleList, setNewArticlesList] = useState(articlesrecord);
-
-    function displaySearchedResults() {
-        let searchInput = document.getElementById('search-input').value;
-        const searchedList = (newArticleList).filter(article => (article.title).includes(searchInput));
-        setArticlesrecord(searchedList);
-    }
-
-    const viewArticle = useNavigate();
-
     return (
         <div>
             <NavBar />
             <div className="d-flex flex-column justify-content-center">
-                <div className="searchbar-container">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="search" id="search-input" 
-                    placeholder="Search for an Article here..."
-                    onChange={displaySearchedResults} />
-                </div>
-                <h1>Articles</h1>
+                <br />
+                <h1>{state.genreName} Articles</h1>
                 <div className="articles-holder-container">
                     {articlesrecord && articlesrecord.map(record => (
                        <div key={record.id} className="card">
@@ -59,7 +45,7 @@ export default function AllArticles() {
                                     </div>
                                 </div>
                                <h5 className="card-title">{record.title}</h5>
-                               <button className="btn btn-primary" onClick={() => {viewArticle('/article', {state: {articleName: record.title}})}}>View Article</button>
+                               <button className="btn btn-primary">View Article</button>
                            </div>
                        </div>
                     ))}
