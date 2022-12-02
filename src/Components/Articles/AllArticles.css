@@ -40,7 +40,7 @@
     padding-bottom: 5px;
     border-radius: 35px;
     height: 30px;
-    border: 2px rgb(11, 104, 211) solid;
+    border: 1.5px rgb(12, 73, 143) solid;
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -52,7 +52,45 @@
 .genre-title {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bolder;
-    color: rgb(3, 41, 58);
+    color: rgb(5, 86, 124);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+.author-container {
+    background-color: rgb(243, 194, 221);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 20px;
+    width: fit-content;
+    height: 30px;
+    margin: 10px;
+}
+
+.author-head {
+    width: fit-content;
+    background-color: rgb(233, 93, 170);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 35px;
+    height: 30px;
+    border: 1.5px rgb(158, 56, 112) solid;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.author-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(97, 54, 77);
     padding: 5px;
     padding-left: 10px;
     padding-right: 15px;

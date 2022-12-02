@@ -35,9 +35,9 @@ export default function AllArticles() {
                                         {record.genre}
                                     </div>
                                 </div>
-                                <div className="genre-container">
-                                    <div className="genre-head d-flex flex-column justify-content-center">{(record.author).charAt(0)}</div>
-                                    <div className="d-flex flex-column justify-content-center genre-title">
+                                <div className="author-container">
+                                    <div className="author-head d-flex flex-column justify-content-center">{(record.author).charAt(0)}</div>
+                                    <div className="d-flex flex-column justify-content-center author-title">
                                         {record.author}
                                     </div>
                                 </div>
