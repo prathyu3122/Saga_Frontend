@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './AllArticles.css'
 import NavBar from '../Navigation/NavBar'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 export default function AllArticles() {
    
@@ -22,8 +23,12 @@ export default function AllArticles() {
     return (
         <div>
             <NavBar />
-            <div>
-                <h1>All Articles</h1>
+            <div className="d-flex flex-column justify-content-center">
+                <div className="searchbar-container">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    <input type="search" placeholder="Search for Article or Author or Genre here..." />
+                </div>
+                <h1>Articles</h1>
                 <div className="articles-holder-container">
                     {articlesrecord && articlesrecord.map(record => (
                        <div key={record.id} className="card">
