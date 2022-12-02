@@ -23,7 +23,6 @@ export default function AddingArticlePage() {
         }
     ]);
 
-    const [message, setMessage] = useState("");
 
     function changeDetails(e) {
         let val = e.target.value;
@@ -31,22 +30,16 @@ export default function AddingArticlePage() {
     }
 
     const onSubmission = () => {
-        let addingFormContainerEl = document.getElementById('addingFormContainer');
-        addingFormContainerEl.classList.toggle('d-none');
-        let messageContainerEl = document.getElementById('messageContainer');
-        messageContainerEl.classList.toggle('d-none');
+        // let addingFormContainerEl = document.getElementById('addingFormContainer');
+        // addingFormContainerEl.classList.toggle('d-none');
+        // let messageContainerEl = document.getElementById('messageContainer');
+        // messageContainerEl.classList.toggle('d-none');
+        alert("Successfully Added!");
     }
 
     const insertRecord = async (e) => {
         await axios.post("http://localhost:8080/saga/addarticle", Articles);
         
-    }
-
-    function getMessage() {
-        fetch("http://localhost:8080/saga/addarticle")
-        .then(result => {
-            setMessage(result);
-        })
     }
 
     return (
@@ -86,9 +79,9 @@ export default function AddingArticlePage() {
                     <input className="btn btn-primary add-button" type="button" name="insert" value="Add Article +" onClick={(e) => insertRecord(e)} />
                 </form>
             </div>
-            <div id="messageContainer" className="d-none" onClick={onSubmission}>
+            {/* <div id="messageContainer" className="d-none" onClick={onSubmission}>
                 <h1>{message}</h1>
-            </div>
+            </div> */}
             <div className="d-flex flex-row justify-content-start m-3">
                 <Button variant="primary" type="button">
                     <FontAwesomeIcon icon={faArrowLeft} />&nbsp;&nbsp;

@@ -1,0 +1,64 @@
+.articles-holder-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 70px;
+}
+
+.card {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.card-title {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+}
+
+.genre-container {
+    background-color: rgb(184, 222, 248);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border-radius: 20px;
+    width: fit-content;
+    height: 30px;
+    margin: 10px;
+}
+
+.genre-head {
+    width: fit-content;
+    background-color: rgb(0, 140, 255);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 35px;
+    height: 30px;
+    border: 2px rgb(11, 104, 211) solid;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+.genre-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: rgb(3, 41, 58);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+a {
+    width: fit-content;
+}

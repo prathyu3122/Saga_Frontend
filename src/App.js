@@ -4,6 +4,7 @@ import {Routes, Route} from 'react-router-dom';
 import HomePage from './Components/Home/Main/HomePage';
 import DescriptionCard from './Components/Home/Body/DescriptionCard';
 import AddingArticles from './Components/Articles/AddingArticlePage';
+import AllArticles from './Components/Articles/AllArticles';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />}/>
       <Route path="/addarticle" element={<AddingArticles />} />
+      <Route path="/all-articles" element={<AllArticles />} />
     </Routes>
       
     </div>

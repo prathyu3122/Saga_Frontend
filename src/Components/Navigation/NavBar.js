@@ -19,7 +19,7 @@ export default function NavBar() {
                 <ul className="">
                     <NavLink>
                         <li class="list-item"><Link to="/About-Us">About Us</Link></li>
-                        <li class="list-item"><Link to="/articles">Articles</Link></li>
+                        <li class="list-item"><Link to="/all-articles">Articles</Link></li>
                         <li class="list-item"><Link to="/genres">Genres</Link></li>
                         <li class="list-item"><Link to="/authors">Authors</Link></li> 
                         <li class="list-item">
