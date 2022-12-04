@@ -5,6 +5,7 @@ import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
+import Doodle from '../doodle';
 
 export default function AllAuthors() {
    
@@ -30,18 +31,32 @@ export default function AllAuthors() {
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     <input type="search" placeholder="Search for Author here..." />
                 </div>
-                <h1>Authors</h1>
-                <div className="genres-holder-container">
-                    {authorsrecord && authorsrecord.map(record => (
-                        <div key={record.id} className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">{record.author}</h5>
-                                <button className="btn btn-primary" onClick={() => {viewArticlesOfAuthor('/author-articles', {state: {authorName: record.author}})}}>View Articles &nbsp;
-                                <FontAwesomeIcon icon={faArrowRight} />
-                                </button>
+                <div>
+                <Doodle
+                            rule={`
+                            :doodle {
+                                @grid: 40 / 100vmax;
+                              }
+                              
+                              --hue: calc(200 + .1 * @row() * @col());
+                                background: hsla(var(--hue), 50%, 78%, @r(.1, .6));
+                              clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%')); `}
+                        />
+                </div>
+                <div className="container">
+                    <h1>Authors</h1>
+                    <div className="genres-holder-container">
+                        {authorsrecord && authorsrecord.map(record => (
+                            <div key={record.id} className="card">
+                                <div className="card-body">
+                                    <h5 className="card-title">{record.author}</h5>
+                                    <button className="btn btn-primary" onClick={() => {viewArticlesOfAuthor('/author-articles', {state: {authorName: record.author}})}}>View Articles &nbsp;
+                                    <FontAwesomeIcon icon={faArrowRight} />
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
+import Doodle from '../doodle';
 
 export default function AllGenres() {
    
@@ -30,20 +31,35 @@ export default function AllGenres() {
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                     <input type="search" placeholder="Search for Genre here..." />
                 </div>
-                <h1>Genres</h1>
-                <div className="genres-holder-container">
-                    {genresrecord && genresrecord.map(record => (
-                        <div key={record.id} className="card">
-                        <img className="card-img-top" src={record.gimage} alt="Card Image" />
-                        <div className="card-body">
-                            <h5 className="card-title">{record.gname}</h5>
-                            <button className="btn btn-primary" onClick={() => {viewArticlesOfGenre('/genre-articles', {state: {genreName: record.gname}})}}>View Articles &nbsp;
-                            <FontAwesomeIcon icon={faArrowRight} />
-                            </button>
-                        </div>
-                    </div>
-                    ))}
+                <div>
+                <Doodle
+                            rule={`
+                            :doodle {
+                                @grid: 40 / 100vmax;
+                              }
+                              
+                              --hue: calc(200 + .1 * @row() * @col());
+                                background: hsla(var(--hue), 50%, 78%, @r(.1, .6));
+                              clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%')); `}
+                        />
                 </div>
+                <div className="inner-container">
+                    <h1>Genres</h1>
+                    <div className="genres-holder-container">
+                        {genresrecord && genresrecord.map(record => (
+                            <div key={record.id} className="card">
+                            <img className="card-img-top" src={record.gimage} alt="Card Image" />
+                            <div className="card-body">
+                                <h5 className="card-title">{record.gname}</h5>
+                                <button className="btn btn-primary" onClick={() => {viewArticlesOfGenre('/genre-articles', {state: {genreName: record.gname}})}}>View Articles &nbsp;
+                                <FontAwesomeIcon icon={faArrowRight} />
+                                </button>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+                
             </div>
         </div>
     )

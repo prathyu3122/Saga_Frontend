@@ -1,3 +1,16 @@
+.inner-container {
+    
+    position: absolute;
+    top: 40%;
+    overflow: hidden;
+    transition: .2s ease;
+    will-change: transform;
+    z-index: 3;
+    overflow: hidden;
+    line-height: 1.4;
+    
+}
+
 .genres-holder-container {
     display: flex;
     flex-direction: row;
