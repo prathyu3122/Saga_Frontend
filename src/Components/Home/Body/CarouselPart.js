@@ -13,7 +13,7 @@ export default function CarouselPart() {
         <Carousel.Item>
           <img
             className="d-block"
-            src="blogging2.jpg"
+            src={process.env.PUBLIC_URL + "/images/blogging2.jpg"}
             alt="First slide"
           />
           <Carousel.Caption>
@@ -24,7 +24,7 @@ export default function CarouselPart() {
         <Carousel.Item>
           <img
             className="d-block"
-            src="blogging2.jpg"
+            src={process.env.PUBLIC_URL + "/images/blogging2.jpg"}
             alt="Second slide"
           />
   
@@ -36,7 +36,7 @@ export default function CarouselPart() {
         <Carousel.Item>
           <img
             className="d-block"
-            src="blogging2.jpg"
+            src={process.env.PUBLIC_URL + "/images/blogging2.jpg"}
             alt="Third slide"
           />
   

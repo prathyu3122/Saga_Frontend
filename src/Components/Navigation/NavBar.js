@@ -10,8 +10,8 @@ export default function NavBar() {
     const handleClick = useNavigate();
 
     return (
-        <div className="navigation-container m-3">
-            <div onClick={() => {handleClick('/')}}>
+        <div className="navigation-container">
+            <div className="logo-container" onClick={() => {handleClick('/')}}>
                 <img src="logo-color.png" alt="logo"
                     className="logo-img" />
             </div>

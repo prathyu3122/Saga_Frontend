@@ -8,6 +8,8 @@ import AllArticles from './Components/Articles/AllArticles';
 import AllGenres from './Components/Genres/AllGenres';
 import GenrePage from './Components/Genres/GenrePage';
 import Article from './Components/Articles/Article';
+import AllAuthors from './Components/Authors/AllAuthors';
+import AuthorPage from './Components/Authors/AuthorPage';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Route path="/genres" element={<AllGenres />} />
       <Route path="/genre-articles" element={<GenrePage />} />
       <Route path="/article" element={<Article />} />
+      <Route path="/authors" element={<AllAuthors />} />
+      <Route path="/author-articles" element={<AuthorPage />} />
     </Routes>
       
     </div>

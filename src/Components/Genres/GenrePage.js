@@ -9,10 +9,10 @@ export default function GenrePage() {
    
     const [articlesrecord, setArticlesrecord] = useState([]);
     const {state} = useLocation();
-    console.log(state.genreName);
+    // console.log(state.genreName);
 
     useEffect(() => {
-        fetch("http://localhost:8080/saga/article/" + state.genreName)
+        fetch("http://localhost:8080/saga/genre_articles/" + state.genreName)
         .then(articles => articles.json())
         .then((articles) => {
             console.log(articles);
