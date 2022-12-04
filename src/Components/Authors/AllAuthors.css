@@ -11,6 +11,13 @@
     
 }
 
+.articles-holder-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .genres-holder-container {
     display: flex;
     flex-direction: row;

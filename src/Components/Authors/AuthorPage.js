@@ -4,6 +4,7 @@ import '../Articles/AllArticles.css'
 import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useLocation } from 'react-router';
+import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
 export default function AuthorPage() {
@@ -21,6 +22,8 @@ export default function AuthorPage() {
         });
 
     }, []);
+
+    const viewArticle = useNavigate();
 
     return (
         <div>
@@ -59,7 +62,15 @@ export default function AuthorPage() {
                                         </div>
                                     </div>
                                 <h5 className="card-title">{record.title}</h5>
-                                <button className="btn btn-primary">View Article</button>
+                                <button className="btn btn-primary" onClick={() => {
+                                    viewArticle('/article', {state: {articleName: record.title, 
+                                                                        articleImage: record.imageurl, 
+                                                                        articleDescription: record.description,
+                                                                        articlePublishingDate: record.publishingdate,
+                                                                        articleAuthor: record.author
+                                                                    }})}
+                                    }
+                                >View Article</button>
                             </div>
                         </div>
                         ))}

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './AllArticles.css'
+import Button from 'react-bootstrap/Button';
 import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass,faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
@@ -30,6 +31,7 @@ export default function AllArticles() {
     }
 
     const viewArticle = useNavigate();
+    const navigateBack = useNavigate();
 
     return (
         <div>
@@ -85,6 +87,12 @@ export default function AllArticles() {
                             </div>
                         </div>
                         ))}
+                    </div>
+                    <div className="d-flex flex-row justify-content-start m-3">
+                        <Button variant="primary" type="button" onClick={() => {navigateBack('/')}}>
+                            <FontAwesomeIcon icon={faArrowLeft} />&nbsp;&nbsp;
+                            Back
+                        </Button>
                     </div>
                 </div>
             </div>

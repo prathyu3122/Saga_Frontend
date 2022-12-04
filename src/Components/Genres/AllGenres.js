@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './AllGenres.css'
+import Button from 'react-bootstrap/Button';
 import NavBar from '../Navigation/NavBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
@@ -21,7 +22,7 @@ export default function AllGenres() {
     }, [])
 
     const viewArticlesOfGenre = useNavigate();
-
+    const navigateBack = useNavigate();
 
     return (
         <div>
@@ -57,6 +58,12 @@ export default function AllGenres() {
                             </div>
                         </div>
                         ))}
+                    </div>
+                    <div className="d-flex flex-row justify-content-start m-3">
+                        <Button variant="primary" type="button" onClick={() => {navigateBack('/')}}>
+                            <FontAwesomeIcon icon={faArrowLeft} />&nbsp;&nbsp;
+                            Back
+                        </Button>
                     </div>
                 </div>
                 
