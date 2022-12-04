@@ -15,8 +15,8 @@ export default function NavBar() {
                 <img src="logo-color.png" alt="logo"
                     className="logo-img" />
             </div>
-            <div>
-                <ul className="">
+            <div className="d-flex flex-column justify-content-center">
+                <ul>
                     <NavLink>
                         <li class="list-item"><Link to="/About-Us">About Us</Link></li>
                         <li class="list-item"><Link to="/all-articles">Articles</Link></li>
