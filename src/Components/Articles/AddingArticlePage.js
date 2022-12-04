@@ -49,7 +49,7 @@ export default function AddingArticlePage() {
                 <h1>Add your article here &nbsp;
                 <FontAwesomeIcon icon={faArrowDown} />
                 </h1>
-                <form id="addingArticleForm" className="p-4 ml-5 mr-5" onSubmit={onSubmission}>
+                <form id="addingArticleForm" className="p-4 ml-5 mr-5">
                     <div className="form-group m-4">
                         <label for="title">Title:</label>
                         <input type="text" className="form-control" id="title" name="title" value={Articles.title} onChange={(e) => changeDetails(e)} />
