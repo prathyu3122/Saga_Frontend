@@ -80,7 +80,7 @@ export default function Register() {
     }
 
     const insertUser = async (e) => {
-        await axios.post("http://localhost:8080/saga/addarticle", user);
+        await axios.post("http://localhost:8080/saga/addUser", user);
         
     }
 
