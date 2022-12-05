@@ -5,13 +5,13 @@
     margin-top: 40px;
 }
 
-label {
+.addingForm-container label {
     font-weight: 500;
     text-align: left;
     margin-bottom: 20px;
 }
 
-form {
+.addingForm-container form {
     width: 80%;
     align-self: center;
     background-color: #bbd7f8;
@@ -20,7 +20,7 @@ form {
     border: #5d88b9 2px solid;
 }
 
-.form-group {
+.addingForm-container .form-group {
    text-align: left;
 }
 

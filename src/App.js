@@ -10,6 +10,7 @@ import GenrePage from './Components/Genres/GenrePage';
 import Article from './Components/Articles/Article';
 import AllAuthors from './Components/Authors/AllAuthors';
 import AuthorPage from './Components/Authors/AuthorPage';
+import Register from './Components/Registration/Register';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
       <Route path="/article" element={<Article />} />
       <Route path="/authors" element={<AllAuthors />} />
       <Route path="/author-articles" element={<AuthorPage />} />
+      {/* Need to change */}
+      <Route path="/login" element={<Register />} />
     </Routes>
       
     </div>

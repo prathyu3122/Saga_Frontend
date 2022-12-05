@@ -1,0 +1,44 @@
+.registration-container {
+    width: 60%;
+    position: absolute;
+    top: 10%;
+    overflow: hidden;
+    transition: .2s ease;
+    will-change: transform;
+    z-index: 3;
+    overflow: hidden;
+    line-height: 1.4;
+    background: #fff;
+    border-radius: 30px;
+    padding: 20px;
+    
+}
+
+.registration-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+
+.registration-form h1 {
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+.registration-form .form-group {
+    padding: 5px;
+    margin: 8px;
+    margin-top: 0;
+}
+
+.registration-form .form-group label {
+    font-family: cursive;
+    font-weight: bolder;
+    color: #103664;
+    margin: 5px;
+}
