@@ -29,29 +29,36 @@ export default function AddingArticlePage() {
         setArticles({...Articles, [e.target.name]: val})
     }
 
-    const onSubmission = () => {
-        // let addingFormContainerEl = document.getElementById('addingFormContainer');
-        // addingFormContainerEl.classList.toggle('d-none');
-        // let messageContainerEl = document.getElementById('messageContainer');
-        // messageContainerEl.classList.toggle('d-none');
+    const onSubmission = (event) => {
 
-        let title = document.getElementById('title').value;
-        let genre = document.getElementById('genre').value;
-        let description = document.getElementById('description').value;
-        let author = document.getElementById('author').value;
-        let publishing_date = document.getElementById('pdate').value;
+        event.preventDefault();
 
-        if(title === "" || genre === "" || description === "" || author === "" || publishing_date === "") {
-            alert("Enter all the values for uploading!!!");
-        }
-        else {
-            alert("Successfully Added!");
-        }
+        // let title = document.getElementById('title').value;
+        // let genre = document.getElementById('genre').value;
+        // let description = document.getElementById('description').value;
+        // let author = document.getElementById('author').value;
+        // let image = document.getElementById('imgUrl').value;
+        // let publishing_date = document.getElementById('pdate').value;
+
+        // if(title === "" || genre === "" || description === "" || author === "" || image==="" || publishing_date === "") {
+        //     alert("Enter all the values for uploading!!!");
+        // }
+        // else {
+        //     alert("Article added Successfully!!!");
+        //     backNavigate('/');
+        // }
 
     }
 
     const insertRecord = async (e) => {
-        await axios.post("http://localhost:8080/saga/addarticle", Articles);
+        try {
+            await axios.post("http://localhost:8080/saga/addarticle", Articles);
+            await alert("Article added Successfully!!!");
+            await backNavigate('/');
+        }
+        catch(message) {
+            alert("Enter all the values!");
+        }
         
     }
 
@@ -82,7 +89,7 @@ export default function AddingArticlePage() {
                     </div>
                     <div className="form-group m-4">
                         <label>Image Url:</label>
-                        <input type="text" className="form-control" id="author" name="imageurl" value={Articles.imageurl}  onChange={(e) => changeDetails(e)}/>
+                        <input type="text" className="form-control" id="imgUrl" name="imageurl" value={Articles.imageurl}  onChange={(e) => changeDetails(e)}/>
                     </div>
                     <div className="form-group m-4">
                         <label>Publishing Date:</label>

@@ -13,6 +13,7 @@ export default function Register() {
         handleUsername();
         handleEmail();
         handlePassword();
+        handleConfirmPassword();
     }
 
     function handleUsername() {
@@ -66,7 +67,7 @@ export default function Register() {
 
     const handleClick = useNavigate();
 
-    const [user, setUser] = useState([
+    const [User, setUser] = useState([
         {
             "username" : "",
             "email" : "",
@@ -76,12 +77,18 @@ export default function Register() {
 
     function changeDetails(e) {
         let val = e.target.value;
-        setUser({...user, [e.target.name]: val})
+        setUser({...User, [e.target.name]: val})
     }
 
     const insertUser = async (e) => {
-        await axios.post("http://localhost:8080/saga/addUser", user);
-        
+        await axios.post("http://localhost:8080/saga/addUser", User);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        handleForm();
+        alert("Successfully Registered!!");
+        handleClick('/');
     }
 
 
@@ -113,24 +120,24 @@ export default function Register() {
                         <h1>SIGN UP</h1>
                       
                     </div>
-                    <form onSubmit={handleForm}>
+                    <form onSubmit={(e) => handleSubmit(e)}>
                         <div className="form-group">
                             <label htmlFor="username">Username:</label>
-                            <input type="text" className="form-control" id="username" name="username" value={user.username} onChange={(e) => changeDetails(e)} />
+                            <input type="text" className="form-control" id="username" name="username" value={User.username} onChange={(e) => changeDetails(e)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="email">Email ID:</label>
-                            <input type="email" className="form-control" id="email" name="email" value={user.email} onChange={(e) => changeDetails(e)} />
+                            <input type="email" className="form-control" id="email" name="email" value={User.email} onChange={(e) => changeDetails(e)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password:</label>
-                            <input type="password" className="form-control" id="password" name="password" value={user.password} onChange={(e) => changeDetails(e)} />
+                            <input type="password" className="form-control" id="password" name="password" value={User.password} onChange={(e) => changeDetails(e)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="cpassword">Confirm Password:</label>
                             <input type="password" className="form-control" id="cpassword" name="cpassword" />
                         </div>
-                        <div>
+                        <div className="d-flex flex-row justify-content-center">
                             <input className="btn btn-primary add-button" type="submit" name="insert" value="Register" onClick={(e) => insertUser(e)} />
                         </div>
                     </form>
