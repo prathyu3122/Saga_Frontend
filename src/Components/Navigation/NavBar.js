@@ -22,14 +22,15 @@ export default function NavBar() {
                         <li class="list-item"><Link to="/all-articles">Articles</Link></li>
                         <li class="list-item"><Link to="/genres">Genres</Link></li>
                         <li class="list-item"><Link to="/authors">Authors</Link></li> 
-                        <li class="list-item">
+                        <li class="list-item d-block">
                             <Link to="/addarticle">
                                 <button className="btn btn-primary">
                                 <FontAwesomeIcon icon={faPenToSquare} />
                                 &nbsp;&nbsp;
                                     Write an Article?
                                 </button>
-                            </Link></li> 
+                            </Link>
+                        </li> 
                         <li class="list-item">
                             <Link to="/login">
                                 <button className="btn btn-primary">

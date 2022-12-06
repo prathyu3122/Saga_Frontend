@@ -4,16 +4,50 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Login.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Doodle from '../doodle';
+import axios from 'axios';
+
 
 export default function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert("Login successful!");
-        handleClick('/');
     }
 
     const handleClick = useNavigate();
+
+    const [User, setUser] = useState([
+        {
+            "username" : "",
+            "password" : ""
+        }
+    ]);
+
+    function changeDetails(e) {
+        let val = e.target.value;
+        setUser({...User, [e.target.name]: val})
+    }
+
+    const verifyUser = async (e) => {
+
+        let username = document.getElementById('username').value;
+        let result;
+        try {
+            result = await axios.post("http://localhost:8080/saga/verifyUser", User);
+        }
+        catch(err) {
+            alert("Enter Username and Password to Login!")
+        }
+        console.log(result);
+        if(result.data === username) {
+            alert("Login successful!");
+            const loginUser = result.data;
+            handleClick('/', {state: {loginUser: loginUser}});
+        }
+        else {
+            alert(result.data);
+        }
+    }
+
 
     return (
         <div className="d-flex flex-row justify-content-center">
@@ -46,14 +80,14 @@ export default function Login() {
                     <form onSubmit={(e) => handleSubmit(e)}>
                         <div className="form-group">
                             <label htmlFor="username">Username:</label>
-                            <input type="text" className="form-control" id="username" name="username" />
+                            <input type="text" className="form-control" id="username" name="username" value={User.username} onChange={(e) => changeDetails(e)} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password:</label>
-                            <input type="password" className="form-control" id="password" name="password"/>
+                            <input type="password" className="form-control" id="password" name="password" value={User.password} onChange={(e) => changeDetails(e)}/>
                         </div>
                         <div className="d-flex flex-row justify-content-center">
-                            <input className="btn btn-primary add-button" type="submit" value="Log In" name="login" />
+                            <input className="btn btn-primary add-button" type="submit" value="Log In" name="login" onClick={(e) => verifyUser(e)} />
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <span className="register-here-container">New User ? &nbsp;
