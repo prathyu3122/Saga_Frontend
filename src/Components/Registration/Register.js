@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './Register.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Doodle from '../doodle';
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Register() {
@@ -139,6 +139,11 @@ export default function Register() {
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <input className="btn btn-primary add-button" type="submit" name="insert" value="Register" onClick={(e) => insertUser(e)} />
+                        </div>
+                        <div className="d-flex flex-row justify-content-center">
+                            <span className="login-here-container">Already a User ? &nbsp;
+                                <Link to="/login">Login Here</Link>
+                            </span>
                         </div>
                     </form>
                 </div>

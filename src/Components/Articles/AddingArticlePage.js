@@ -30,24 +30,7 @@ export default function AddingArticlePage() {
     }
 
     const onSubmission = (event) => {
-
         event.preventDefault();
-
-        // let title = document.getElementById('title').value;
-        // let genre = document.getElementById('genre').value;
-        // let description = document.getElementById('description').value;
-        // let author = document.getElementById('author').value;
-        // let image = document.getElementById('imgUrl').value;
-        // let publishing_date = document.getElementById('pdate').value;
-
-        // if(title === "" || genre === "" || description === "" || author === "" || image==="" || publishing_date === "") {
-        //     alert("Enter all the values for uploading!!!");
-        // }
-        // else {
-        //     alert("Article added Successfully!!!");
-        //     backNavigate('/');
-        // }
-
     }
 
     const insertRecord = async (e) => {
@@ -57,7 +40,7 @@ export default function AddingArticlePage() {
             await backNavigate('/');
         }
         catch(message) {
-            alert("Enter all the values!");
+            alert("Enter all the values for successful uploading!!");
         }
         
     }
