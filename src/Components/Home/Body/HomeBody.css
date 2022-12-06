@@ -70,8 +70,6 @@
     flex-direction: column;
     justify-content: flex-start;
     background-image: url("https://media.istockphoto.com/id/1137122277/vector/internet-of-things-background-hand-drawn-doodle-cloud-computing-technology-and-social-media.jpg?s=612x612&w=0&k=20&c=G1g26b2bjhv5VKdKRk3nBLo3NIZn3bxocSi5spWx2xc=");
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
 }
 
 .cards-container h2 {
@@ -85,7 +83,64 @@
     border-radius: 30px;
 }
 
+.about-us-container {
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+   padding: 40px;
+  
+}
+
+.about-us-inner-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about-us-container h2 {
+    text-align: start;
+    color: #2161af;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: fit-content;
+    border-radius: 30px;
+}
+
+.about-us-container img {
+    border-radius: 200px;
+    height: 380px;
+    width: 450px;
+}
+
+.elements-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.elements-container ul {
+   list-style-type: square;
+   color: #154886;
+   font-weight: 500;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.elements-container ul li {
+    font-size: 22px;
+    margin: 10px;
+    align-self: center;
+}
+
+.elements-container .btn {
+    margin-top: 20px;
+    font-weight: 500;
+    align-self: center;
+    width: fit-content;
+}
+
 .footer-container {
+    margin-top: 60px;
     padding: 30px;
     background-color: #143155;
     display: flex;
@@ -129,3 +184,4 @@
 .footer-container div {
     padding: 30px;
 }
+

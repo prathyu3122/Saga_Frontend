@@ -13,6 +13,7 @@
     "bootstrap": "^5.2.3",
     "css-doodle": "^0.30.10",
     "react": "^18.2.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-doodle": "^1.0.0",

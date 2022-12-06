@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightToBracket, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import './NavBar.css';
@@ -18,7 +19,7 @@ export default function NavBar() {
             <div className="d-flex flex-column justify-content-center">
                 <ul>
                     <NavLink>
-                        <li class="list-item"><Link to="/About-Us">About Us</Link></li>
+                        <li class="list-item"><AnchorLink href="#aboutUs">About Us</AnchorLink></li>
                         <li class="list-item"><Link to="/all-articles">Articles</Link></li>
                         <li class="list-item"><Link to="/genres">Genres</Link></li>
                         <li class="list-item"><Link to="/authors">Authors</Link></li> 

@@ -1,8 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
+import Button from 'react-bootstrap/Button';
 import './HomeBody.css';
-import CarouselPart from './CarouselPart';
-import DescriptionCard from './DescriptionCard';
+import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFaceGrinWink, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
@@ -44,14 +44,65 @@ export default function HomeBody() {
             {/* <div className="carousel-container">
                 <CarouselPart />
             </div> */}
-            <div className="cards-container bg-image">
+            <div className="cards-container bg-image" >
                 <h2>Explore our creations...</h2>
                 <div className="m-2 d-flex flex-row justify-content-center">
-                    <DescriptionCard />
-                    <DescriptionCard />
-                    <DescriptionCard />
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={process.env.PUBLIC_URL + "/images/articles.jpg"}/>
+                            <Card.Body>
+                                <Card.Title>Articles</Card.Title>
+                                <Card.Text>
+                                Find your interested article and read it!!
+                                </Card.Text>
+                                <Button variant="primary" onClick={() => handleClick('/all-articles')}>Articles</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={process.env.PUBLIC_URL + "/images/author.jpg"} />
+                            <Card.Body>
+                                <Card.Title>Authors</Card.Title>
+                                <Card.Text>
+                                You can find all the authors and their articles
+                                </Card.Text>
+                                <Button variant="primary"  onClick={() => handleClick('/authors')}>Authors</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                    <div>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={process.env.PUBLIC_URL + "/images/genres.png"} />
+                            <Card.Body>
+                                <Card.Title>Genres</Card.Title>
+                                <Card.Text>
+                                You can find all the genres and its articles
+                                </Card.Text>
+                                <Button variant="primary" onClick={() => handleClick('/genres')}>Genres</Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
                 </div>
                 
+            </div>
+            <div className="about-us-container" id="aboutUs">
+                <h2>About Us</h2>
+                <div className="about-us-inner-container">
+                    <div className="img-container">
+                        <img src={process.env.PUBLIC_URL + "/images/blogging.jpg"} />
+                    </div>
+                    <div className="elements-container">
+                        <ul>
+                            <li className="list-item">Read different genred articles by exploring our page and services</li>
+                            <li className="list-item">Write any type of article by logging in! (Need to register first!)</li>
+                            <li className="list-item">Find all types of genres of your interests!</li>
+                            <li className="list-item">Find various authors worldwide here in one click!</li>
+                            
+                        </ul>
+                        <button className="btn btn-primary" onClick={() => {handleClick('/login')}}>Log In here to write!</button>
+                    </div>
+                </div>
             </div>
             <div className="footer-container">
                 <div className="">
