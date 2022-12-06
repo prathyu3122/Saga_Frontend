@@ -113,9 +113,9 @@ export default function Register() {
             <div className="registration-container">
                 
                 <div className="registration-form">
-                    <div className="logo-container d-flex flex-row m-0 pb-5" onClick={() => {handleClick('/')}}>
+                    <div className="logo-container d-flex flex-row m-0 pb-5" >
                         <img src="logo-color.png" alt="logo"
-                            className="logo-img" />
+                            className="logo-img" onClick={() => {handleClick('/')}} />
                         
                         <h1>SIGN UP</h1>
                       

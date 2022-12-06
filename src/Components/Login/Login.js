@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Login.css'
@@ -9,9 +9,10 @@ export default function Login() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert("Login Successfull!!");
+        alert("Login successful!");
         handleClick('/');
     }
+
     const handleClick = useNavigate();
 
     return (
@@ -35,9 +36,9 @@ export default function Login() {
             <div className="login-container">
                 
                 <div className="login-form">
-                    <div className="logo-container d-flex flex-row m-0 pb-5" onClick={() => {handleClick('/')}}>
+                    <div className="logo-container d-flex flex-row m-0 pb-5">
                         <img src="logo-color.png" alt="logo"
-                            className="logo-img" />
+                            className="logo-img" onClick={() => {handleClick('/')}} />
                         
                         <h1>LOG IN</h1>
                       
@@ -52,7 +53,7 @@ export default function Login() {
                             <input type="password" className="form-control" id="password" name="password"/>
                         </div>
                         <div className="d-flex flex-row justify-content-center">
-                            <input className="btn btn-primary add-button" type="submit" value="Log In" />
+                            <input className="btn btn-primary add-button" type="submit" value="Log In" name="login" />
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <span className="register-here-container">New User ? &nbsp;

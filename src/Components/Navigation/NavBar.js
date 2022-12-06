@@ -38,13 +38,6 @@ export default function NavBar() {
                                 </button>
                             </Link>
                         </li>
-                        {/* <li class="list-item">
-                            <Link to="/login">
-                                <button className="btn btn-primary">
-                                    Sign Up
-                                </button>
-                            </Link>
-                        </li> */}
                     </NavLink>
                 </ul>
             </div>

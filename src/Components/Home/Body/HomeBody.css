@@ -1,0 +1,133 @@
+.blogging-img-container img {
+    border-radius: 200px;
+    height: 380px;
+    width: 420px;
+}
+
+.blogging-img-container {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.page-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.blogging-img-container .page-description h1{
+    margin: 40px;
+    font-family: "Lucida Handwriting";
+    font-size: 50px;
+    color:  #1f6ccc;
+
+}
+
+.blogging-img-container .page-description p {
+    font-size: 26px;
+    margin-right: 70px;
+    color:  #5c91db;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.img-container {
+    margin-top: 60px;
+}
+.welcome-container {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: #154886;
+}
+
+.page-description .btn {
+    margin: 30px;
+    font-family: "Verdana";
+    font-style: italic;
+    font-weight: 600;
+    border: 1.5px solid;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.cards-container {
+    width: 98.5vw;
+    margin-top: 60px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url("https://media.istockphoto.com/id/1137122277/vector/internet-of-things-background-hand-drawn-doodle-cloud-computing-technology-and-social-media.jpg?s=612x612&w=0&k=20&c=G1g26b2bjhv5VKdKRk3nBLo3NIZn3bxocSi5spWx2xc=");
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.cards-container h2 {
+    text-align: start;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background-color: #143155;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 30px;
+}
+
+.footer-container {
+    padding: 30px;
+    background-color: #143155;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.footer-container h3 {
+    text-align: start;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container img {
+    text-align: start;
+    height: 30px;
+    width: 30px;
+}
+
+.footer-container ul {
+    text-align: start;
+    list-style: none;
+    float: left;
+}
+
+.footer-container li a{
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer-container li {
+    margin: 0px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-container div {
+    padding: 30px;
+}
+
+.contact-us-container {
+    padding-right: 50px;
+}
+
+..contact-us-container ul {
+    display: flex;
+    flex-direction: column;
+}
