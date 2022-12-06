@@ -54,7 +54,7 @@ export default function HomeBody() {
                 
             </div>
             <div className="footer-container">
-                <div className="d-flex flex-column justify-content-center">
+                <div className="">
                     <h3>Follow Us</h3>
                     <ul className="d-flex flex-column justify-content-start">
                         <li>
@@ -71,24 +71,20 @@ export default function HomeBody() {
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Write Us</h3>
-                    <ul className="d-flex flex-column justify-content-start">
-                        <li>
-                            <img src={process.env.PUBLIC_URL + "/images/gmail.png"} /> &nbsp;
-                            saga_articles@gmail.com
-                        </li>
-                    </ul>
-                </div>
-                <div className="contact-us-container">
+                <div className="">
                     <h3>Contact Us</h3>
-                    <ul>
-                        <li>
-                        <FontAwesomeIcon icon={faPhone} />&nbsp;
-                        9876543210
+                    <ul className="d-flex flex-column justify-content-start">
+                        <li><a>
+                            <img src={process.env.PUBLIC_URL + "/images/gmail.png"} />&nbsp;
+                            saga_articles@gmail.com</a>
+                        </li>
+                        <li><a>
+                            <img src={process.env.PUBLIC_URL + "/images/call.png"} />&nbsp;
+                            9876543210</a>
                         </li>
                     </ul>
                 </div>
+               
             </div>
            
         </div>

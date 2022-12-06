@@ -109,25 +109,17 @@
 }
 
 .footer-container li a{
+    text-align: start;
     font-size: 16px;
     color: #fff;
 }
 
 .footer-container li {
-    margin: 0px;
     font-weight: 900;
+    text-align: start;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .footer-container div {
     padding: 30px;
-}
-
-.contact-us-container {
-    padding-right: 50px;
-}
-
-..contact-us-container ul {
-    display: flex;
-    flex-direction: column;
 }
