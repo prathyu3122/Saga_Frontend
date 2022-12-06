@@ -18,6 +18,11 @@
     margin-left: 30px;
 }
 
+.btn-container {
+    width: 80%;
+    text-align: center;
+}
+
 .blogging-img-container .page-description h1{
     margin: 40px;
     font-family: "Lucida Handwriting";
@@ -60,6 +65,7 @@
     width: 98.5vw;
     margin-top: 60px;
     padding: 30px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

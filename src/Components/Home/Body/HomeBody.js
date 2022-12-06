@@ -31,7 +31,7 @@ export default function HomeBody() {
                         <FontAwesomeIcon icon={faFaceGrinWink} />
                         </p>
                     </div>
-                    <div>
+                    <div className="btn-container">
                         <button className="btn btn-outline-primary" onClick={() => {handleClick('/all-articles')}}>There you go!!! &nbsp;
                         <FontAwesomeIcon icon={faHandPointRight} />
                         </button>
