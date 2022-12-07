@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
 import './HomePage.css';
 
@@ -7,6 +7,14 @@ import HomeBody from '../Body/HomeBody'
 
 
 export default function Home() {
+
+    useEffect(() => {
+        window.history.pushState(null, document.title, window.location.href);
+        window.addEventListener('popstate', function (event){
+            window.history.pushState(null, document.title,  window.location.href);
+        });
+    }, []);
+    
     return (
         <div className="home-container">
             <div>

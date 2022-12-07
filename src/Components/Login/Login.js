@@ -41,7 +41,8 @@ export default function Login() {
         if(result.data === username) {
             alert("Login successful!");
             const loginUser = result.data;
-            handleClick('/', {state: {loginUser: loginUser}});
+            // handleClick('/', {state: {loginUser: loginUser}});
+            handleClick('/');            
         }
         else {
             alert(result.data);
