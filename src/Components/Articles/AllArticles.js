@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass,faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
+import { isAccordionItemSelected } from 'react-bootstrap/esm/AccordionContext';
 
 export default function AllArticles() {
    
@@ -22,16 +23,33 @@ export default function AllArticles() {
 
     }, []);
 
-    const [newArticleList, setNewArticlesList] = useState(articlesrecord);
+    // const [newArticleList, setNewArticlesList] = useState(articlesrecord);
 
-    function displaySearchedResults() {
-        let searchInput = document.getElementById('search-input').value;
-        const searchedList = (newArticleList).filter(article => (article.title).includes(searchInput));
-        setArticlesrecord(searchedList);
-    }
+    // function displaySearchedResults() {
+    //     let searchInput = document.getElementById('search-input').value;
+    //     const searchedList = (newArticleList).filter(article => (article.title).includes(searchInput));
+    //     setArticlesrecord(searchedList);
+    // }
+
+    // Search Functionality
+    const [q, setQ] = useState("");
+    const [searchParam] = useState(["title"]);
 
     const viewArticle = useNavigate();
     const navigateBack = useNavigate();
+
+    function searchArticles() {
+        return articlesrecord.filter((article) => {
+            return searchParam.some((newArticle) => {
+                return (
+                    article[newArticle]
+                    .toString()
+                    .toLowerCase()
+                    .indexOf(q.toLowerCase()) > -1
+                );
+            });
+        });
+    }
 
     return (
         <div>
@@ -39,9 +57,10 @@ export default function AllArticles() {
             <div className="d-flex flex-column justify-content-center">
                 <div className="searchbar-container">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="search" id="search-input" 
-                    placeholder="Search for an Article here..."
-                    onChange={displaySearchedResults} />
+                    <input type="search" name="search-input" id="search-input" 
+                    placeholder="Search for an Article here..." value={q} 
+                    onChange={(e) => setQ(e.target.value)}
+                    />
                 </div>
                 <div>
                 <Doodle
@@ -57,7 +76,7 @@ export default function AllArticles() {
                 <div className="inner-container">
                     <h1>Articles</h1>
                     <div className="articles-holder-container">
-                        {articlesrecord && articlesrecord.map(record => (
+                        {searchArticles(articlesrecord) && searchArticles(articlesrecord).map(record => (
                         <div key={record.id} className="card">
                             <img className="card-img-top" src={record.imageurl} alt="Card Image" />
                             <div className="card-body">
