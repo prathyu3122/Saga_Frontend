@@ -23,20 +23,13 @@ export default function AllArticles() {
 
     }, []);
 
-    // const [newArticleList, setNewArticlesList] = useState(articlesrecord);
-
-    // function displaySearchedResults() {
-    //     let searchInput = document.getElementById('search-input').value;
-    //     const searchedList = (newArticleList).filter(article => (article.title).includes(searchInput));
-    //     setArticlesrecord(searchedList);
-    // }
+    const viewArticle = useNavigate();
+    const navigateBack = useNavigate();
 
     // Search Functionality
     const [q, setQ] = useState("");
     const [searchParam] = useState(["title"]);
 
-    const viewArticle = useNavigate();
-    const navigateBack = useNavigate();
 
     function searchArticles() {
         return articlesrecord.filter((article) => {

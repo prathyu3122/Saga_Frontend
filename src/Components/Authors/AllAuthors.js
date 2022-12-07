@@ -24,13 +24,34 @@ export default function AllAuthors() {
     const viewArticlesOfAuthor = useNavigate();
     const navigateBack = useNavigate();
 
+    // Search Functionality
+    const [q, setQ] = useState("");
+    const [searchParam] = useState(["author"]);
+
+
+    function searchAuthors() {
+        return authorsrecord.filter((author) => {
+            return searchParam.some((newAuthor) => {
+                return (
+                    author[newAuthor]
+                    .toString()
+                    .toLowerCase()
+                    .indexOf(q.toLowerCase()) > -1
+                );
+            });
+        });
+    }
+
     return (
         <div>
             <NavBar />
             <div className="d-flex flex-column justify-content-center">
                 <div className="searchbar-container">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="search" placeholder="Search for Author here..." />
+                    <input type="search" placeholder="Search for Author here..."
+                    name="search-input" value={q} 
+                    onChange={(e) => setQ(e.target.value)}
+                    />
                 </div>
                 <div>
                 <Doodle
@@ -47,7 +68,7 @@ export default function AllAuthors() {
                 <div className="container">
                     <h1>Authors</h1>
                     <div className="genres-holder-container">
-                        {authorsrecord && authorsrecord.map(record => (
+                        {searchAuthors(authorsrecord) && searchAuthors(authorsrecord).map(record => (
                             <div key={record.id} className="card">
                                 <div className="card-body">
                                     <h5 className="card-title">{record.author}</h5>
