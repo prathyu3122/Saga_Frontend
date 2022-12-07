@@ -24,13 +24,34 @@ export default function AllGenres() {
     const viewArticlesOfGenre = useNavigate();
     const navigateBack = useNavigate();
 
+    // Search Functionality
+    const [q, setQ] = useState("");
+    const [searchParam] = useState(["gname"]);
+
+
+    function searchByGenres() {
+        return genresrecord.filter((genre) => {
+            return searchParam.some((newGenre) => {
+                return (
+                    genre[newGenre]
+                    .toString()
+                    .toLowerCase()
+                    .indexOf(q.toLowerCase()) > -1
+                );
+            });
+        });
+    }
+
     return (
         <div>
             <NavBar />
             <div className="d-flex flex-column justify-content-center">
                 <div className="searchbar-container">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    <input type="search" placeholder="Search for Genre here..." />
+                    <input type="search" placeholder="Search for Genre here..." 
+                     name="search-input" value={q}
+                     onChange={(e) => setQ(e.target.value)}
+                    />
                 </div>
                 <div>
                 <Doodle
@@ -47,7 +68,7 @@ export default function AllGenres() {
                 <div className="inner-container">
                     <h1>Genres</h1>
                     <div className="genres-holder-container">
-                        {genresrecord && genresrecord.map(record => (
+                        {searchByGenres(genresrecord) && searchByGenres(genresrecord).map(record => (
                             <div key={record.id} className="card">
                             <img className="card-img-top" src={record.gimage} alt="Card Image" />
                             <div className="card-body">
