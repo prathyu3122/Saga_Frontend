@@ -12,7 +12,7 @@ export default function NavBar() {
 
     return (
         <div className="navigation-container">
-            <div className="logo-container" onClick={() => {handleClick('/')}}>
+            <div className="logo-container" onClick={() => {handleClick('/home')}}>
                 <img src="logo-color.png" alt="logo"
                     className="logo-img" />
             </div>
@@ -33,9 +33,9 @@ export default function NavBar() {
                             </Link>
                         </li> 
                         <li class="list-item">
-                            <Link to="/login">
+                            <Link to="/">
                                 <button className="btn btn-primary">
-                                    Log In &nbsp;&nbsp;
+                                    Log Out &nbsp;&nbsp;
                                     <FontAwesomeIcon icon={faRightToBracket} />
                                 </button>
                             </Link>

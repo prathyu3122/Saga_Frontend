@@ -42,7 +42,7 @@ export default function Login() {
             alert("Login successful!");
             const loginUser = result.data;
             // handleClick('/', {state: {loginUser: loginUser}});
-            handleClick('/');            
+            handleClick('/home');            
         }
         else {
             alert(result.data);

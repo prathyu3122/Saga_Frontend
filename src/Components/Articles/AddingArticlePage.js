@@ -37,7 +37,7 @@ export default function AddingArticlePage() {
         try {
             await axios.post("http://localhost:8080/saga/addarticle", Articles);
             await alert("Article added Successfully!!!");
-            await backNavigate('/');
+            await backNavigate('/home');
         }
         catch(message) {
             alert("Enter all the values for successful uploading!!");
@@ -86,7 +86,7 @@ export default function AddingArticlePage() {
                 <h1>{message}</h1>
             </div> */}
             <div className="d-flex flex-row justify-content-start m-3">
-                <Button variant="primary" type="button">
+                <Button variant="primary" type="button" onClick={() => backNavigate('/home')}>
                     <FontAwesomeIcon icon={faArrowLeft} />&nbsp;&nbsp;
                     Back
                 </Button>

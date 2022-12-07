@@ -142,7 +142,7 @@ export default function Register() {
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <span className="login-here-container">Already a User ? &nbsp;
-                                <Link to="/login">Login Here</Link>
+                                <Link to="/">Login Here</Link>
                             </span>
                         </div>
                     </form>
