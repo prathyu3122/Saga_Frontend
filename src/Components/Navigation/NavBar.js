@@ -23,7 +23,7 @@ export default function NavBar() {
                         <li class="list-item"><Link to="/all-articles">Articles</Link></li>
                         <li class="list-item"><Link to="/genres">Genres</Link></li>
                         <li class="list-item"><Link to="/authors">Authors</Link></li> 
-                        <li class="list-item d-block">
+                        <li class="list-item">
                             <Link to="/addarticle">
                                 <button className="btn btn-primary">
                                 <FontAwesomeIcon icon={faPenToSquare} />

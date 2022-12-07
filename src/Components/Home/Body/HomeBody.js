@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './HomeBody.css';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFaceGrinWink, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faFaceGrinWink, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 
 
@@ -100,7 +100,13 @@ export default function HomeBody() {
                             <li className="list-item">Find various authors worldwide here in one click!</li>
                             
                         </ul>
-                        <button className="btn btn-primary" onClick={() => {handleClick('/login')}}>Log In here to write!</button>
+                        <button className="btn btn-primary" onClick={() => {handleClick('/addarticle')}}>
+                            <FontAwesomeIcon icon={faHandPointRight} /> &nbsp;
+                            Click here to write an article!
+                            &nbsp;
+                            <FontAwesomeIcon icon={faHandPointLeft} />
+
+                        </button>
                     </div>
                 </div>
             </div>
