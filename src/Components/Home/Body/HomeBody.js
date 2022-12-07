@@ -25,7 +25,8 @@ export default function HomeBody() {
                         <p>
                             <FontAwesomeIcon icon={faAngleDoubleLeft} />&nbsp;
                             Tinker your perplexed mind by 
-                            exploring and experiencing your leisure time with our articles...&nbsp;
+                            exploring and experiencing your leisure 
+                            time with our articles through reading and writing...&nbsp;
                             <FontAwesomeIcon icon={faAngleDoubleRight} />
                             &nbsp;
                         <FontAwesomeIcon icon={faFaceGrinWink} />
