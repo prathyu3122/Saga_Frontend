@@ -12,6 +12,8 @@ export default function HomeBody() {
 
     const handleClick = useNavigate();
 
+    const user = JSON.parse(localStorage.getItem("token"));
+
     return (
         <div className="d-flex flex-column justify-content-center">
             <div className="blogging-img-container">
@@ -102,13 +104,23 @@ export default function HomeBody() {
                             <li className="list-item">Find various authors worldwide here in one click!</li>
                             
                         </ul>
-                        <button className="btn btn-primary" onClick={() => {handleClick('/addarticle')}}>
+                        {!user &&
+                        <button className="btn btn-primary" onClick={() => {handleClick('/login')}}>
                             <FontAwesomeIcon icon={faHandPointRight} /> &nbsp;
-                            Click here to write an article!
+                            Login here to write an article!
                             &nbsp;
                             <FontAwesomeIcon icon={faHandPointLeft} />
 
-                        </button>
+                        </button>}
+
+                        {user && 
+                        <button className="btn btn-primary" onClick={() => {handleClick('/addarticle')}}>
+                            <FontAwesomeIcon icon={faHandPointRight} /> &nbsp;
+                            You can write an article here!
+                            &nbsp;
+                            <FontAwesomeIcon icon={faHandPointLeft} />
+
+                        </button>}
                     </div>
                 </div>
             </div>
