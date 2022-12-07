@@ -37,12 +37,21 @@ export default function Login() {
         catch(err) {
             alert("Enter Username and Password to Login!")
         }
-        console.log(result);
+
+        //Login button local storage functionality
+        if(result.data !== null) {
+            const user = {
+                username : User.username
+            }
+            localStorage.setItem('token', JSON.stringify(user));
+        }
+        //---------
+        
         if(result.data === username) {
             alert("Login successful!");
             const loginUser = result.data;
             // handleClick('/', {state: {loginUser: loginUser}});
-            handleClick('/home');            
+            handleClick('/');            
         }
         else {
             alert(result.data);

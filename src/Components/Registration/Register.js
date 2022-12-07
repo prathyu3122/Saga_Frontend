@@ -115,7 +115,7 @@ export default function Register() {
                 <div className="registration-form">
                     <div className="logo-container d-flex flex-row m-0 pb-5" >
                         <img src="logo-color.png" alt="logo"
-                            className="logo-img" onClick={() => {handleClick('/')}} />
+                            className="logo-img" onClick={() => {handleClick('/login')}} />
                         
                         <h1>SIGN UP</h1>
                       
@@ -142,7 +142,7 @@ export default function Register() {
                         </div>
                         <div className="d-flex flex-row justify-content-center">
                             <span className="login-here-container">Already a User ? &nbsp;
-                                <Link to="/">Login Here</Link>
+                                <Link to="/login">Login Here</Link>
                             </span>
                         </div>
                     </form>

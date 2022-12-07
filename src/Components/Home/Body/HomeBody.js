@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './HomeBody.css';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFaceGrinWink, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faFaceGrinWink, faFaceLaughBeam, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 
 
@@ -32,8 +32,10 @@ export default function HomeBody() {
                         </p>
                     </div>
                     <div className="btn-container">
-                        <button className="btn btn-outline-primary" onClick={() => {handleClick('/all-articles')}}>There you go!!! &nbsp;
-                        <FontAwesomeIcon icon={faHandPointRight} />
+                        <button className="btn btn-outline-primary" 
+                        onClick={() => {handleClick('/all-articles')}}>
+                            There you go!!! &nbsp;
+                            <FontAwesomeIcon icon={faFaceLaughBeam} />
                         </button>
                     </div>
                 </div>

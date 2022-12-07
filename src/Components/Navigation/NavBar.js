@@ -10,9 +10,11 @@ export default function NavBar() {
 
     const handleClick = useNavigate();
 
+    const user = JSON.parse(localStorage.getItem("token"));
+
     return (
         <div className="navigation-container">
-            <div className="logo-container" onClick={() => {handleClick('/home')}}>
+            <div className="logo-container" onClick={() => {handleClick('/')}}>
                 <img src="logo-color.png" alt="logo"
                     className="logo-img" />
             </div>
@@ -32,14 +34,25 @@ export default function NavBar() {
                                 </button>
                             </Link>
                         </li> 
-                        <li class="list-item">
-                            <Link to="/">
-                                <button className="btn btn-primary">
-                                    Log Out &nbsp;&nbsp;
-                                    <FontAwesomeIcon icon={faRightToBracket} />
-                                </button>
+
+                        
+                        {!user && <li class="list-item">
+                            <Link to="/login">
+                            <button className="btn btn-primary">
+                                Log In &nbsp;&nbsp;
+                                <FontAwesomeIcon icon={faRightToBracket} />
+                            </button>
                             </Link>
-                        </li>
+                            </li>
+                            }
+                        {user && <li class="list-item">
+                            <Link to="/">
+                            <button className="btn btn-primary" onClick={() => {localStorage.removeItem('token')}}>
+                                Log Out &nbsp;&nbsp;
+                                <FontAwesomeIcon icon={faRightToBracket} />
+                            </button>
+                            </Link>
+                            </li>}
                     </NavLink>
                 </ul>
             </div>

@@ -81,7 +81,7 @@ export default function AllGenres() {
                         ))}
                     </div>
                     <div className="d-flex flex-row justify-content-start m-3">
-                        <Button variant="primary" type="button" onClick={() => {navigateBack('/home')}}>
+                        <Button variant="primary" type="button" onClick={() => {navigateBack('/')}}>
                             <FontAwesomeIcon icon={faArrowLeft} />&nbsp;&nbsp;
                             Back
                         </Button>
