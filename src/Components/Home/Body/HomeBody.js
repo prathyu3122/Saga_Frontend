@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFaceGrinWink, faFaceLaughBeam, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 
-
+// HomeBody Component which is added to Main Component
 export default function HomeBody() {
 
     const handleClick = useNavigate();

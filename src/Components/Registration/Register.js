@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Doodle from '../doodle';
 import { Link, useNavigate } from 'react-router-dom';
 
-
+//Registration Component with validations
 export default function Register() {
 
     function handleForm() {

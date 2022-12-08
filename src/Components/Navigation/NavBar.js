@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightToBracket, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import './NavBar.css';
 
+//Navigation bar component. It is added for every page
 export default function NavBar() {
 
     const handleClick = useNavigate();

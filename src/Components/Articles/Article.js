@@ -8,6 +8,7 @@ import { useLocation } from 'react-router';
 import "css-doodle";
 import Doodle from '../doodle';
 
+//Article Component is for displaying an article while viewing
 export default function Article() {
    
     const {state} = useLocation();

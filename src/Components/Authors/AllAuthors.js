@@ -8,6 +8,7 @@ import { faMagnifyingGlass, faArrowRight, faArrowLeft } from '@fortawesome/free-
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
+//AllAuthors component displays all the authors available
 export default function AllAuthors() {
    
     const [authorsrecord, setAuthorsrecord] = useState([]);

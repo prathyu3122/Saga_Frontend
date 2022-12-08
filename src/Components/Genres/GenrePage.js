@@ -7,6 +7,7 @@ import { useLocation } from 'react-router';
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
+//Genre Page Component which displays all the articles of that genre
 export default function GenrePage() {
    
     const [articlesrecord, setArticlesrecord] = useState([]);

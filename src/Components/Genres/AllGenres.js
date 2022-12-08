@@ -8,6 +8,7 @@ import { faMagnifyingGlass, faArrowRight, faArrowLeft } from '@fortawesome/free-
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
+// AllGenres Component which displays all the genres available
 export default function AllGenres() {
    
     const [genresrecord, setGenresrecord] = useState([]);

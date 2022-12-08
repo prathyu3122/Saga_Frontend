@@ -7,6 +7,8 @@ import { useLocation } from 'react-router';
 import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 
+
+//AuthorPage Component which displays all the articles of that author
 export default function AuthorPage() {
    
     const [articlesrecord, setArticlesrecord] = useState([]);

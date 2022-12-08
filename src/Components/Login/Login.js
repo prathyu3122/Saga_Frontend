@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Doodle from '../doodle';
 import axios from 'axios';
 
-
+// Login Component
 export default function Login() {
 
     const handleSubmit = (event) => {

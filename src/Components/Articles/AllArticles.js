@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router';
 import Doodle from '../doodle';
 import { isAccordionItemSelected } from 'react-bootstrap/esm/AccordionContext';
 
+//AllArticles Component which displays all the articles available
 export default function AllArticles() {
    
     const [articlesrecord, setArticlesrecord] = useState([]);

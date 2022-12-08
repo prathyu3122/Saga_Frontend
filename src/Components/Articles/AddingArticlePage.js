@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 
+//AddingAfticlePage Component is for adding an article to the web application
 export default function AddingArticlePage() {
 
     const backNavigate = useNavigate();
