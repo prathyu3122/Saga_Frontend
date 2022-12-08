@@ -62,8 +62,9 @@ export default function AllArticles() {
                                 @grid: 40 / 100vmax;
                               }
                               --hue: calc(200 + .1 * @row() * @col());
+                              
                                 background: hsla(var(--hue), 50%, 78%, @r(.1, .6));
-                              clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%')); `}
+                                clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%')); `}
                         />
                 </div>
                 <div className="inner-container">

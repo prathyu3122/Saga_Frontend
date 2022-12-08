@@ -1,14 +1,13 @@
 .inner-container {
     
-        position: absolute;
-        top: 40%;
-        overflow: hidden;
-        transition: .2s ease;
-        will-change: transform;
-        z-index: 3;
-        overflow: hidden;
-        line-height: 1.4;        
-        
+    position: absolute;
+    top: 40%;
+    overflow: hidden;
+    transition: .2s ease;
+    will-change: transform;
+    z-index: 3;
+    overflow: hidden;
+    line-height: 1.4; 
 }
 
 .articles-holder-container {
@@ -39,12 +38,11 @@
 }
 
 .card {
-    width: 20rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 20px;
-    height: fit-content;
     border-radius: 30px;
 }
 
