@@ -44,6 +44,7 @@
     justify-content: center;
     margin: 20px;
     border-radius: 30px;
+    height: fit-content;
 }
 
 .card-img-top {

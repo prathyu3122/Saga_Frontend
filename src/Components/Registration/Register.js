@@ -22,8 +22,8 @@ export default function Register() {
 
         let regName = /^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
 
-        if (name === "" || regName.test(name)) {
-            window.alert("Please enter your username properly.");
+        if (name === "") {
+            window.alert("Please enter your username!");
             name.focus();
             return false;
         }

@@ -7,6 +7,19 @@ import HomeBody from '../Body/HomeBody'
 
 //Main page Component which has HomeBody Component with all details
 export default function Home() {
+
+    useEffect(() => {
+
+        window.history.pushState(null, document.title, window.location.href);
+        
+        window.addEventListener('popstate', function (event){
+        
+        window.history.pushState(null, document.title, window.location.href);
+        
+        });
+        
+        }, []);
+
     return (
         <div className="home-container">
             <div>

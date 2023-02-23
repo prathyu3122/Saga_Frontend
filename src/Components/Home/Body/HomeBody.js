@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './HomeBody.css';
 import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFaceGrinWink, faFaceLaughBeam, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faFaceGrinWink, faCopyright, faFaceLaughBeam, faHandPointLeft, faAngleDoubleLeft, faAngleDoubleRight, faHandPointRight, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router';
 
 // HomeBody Component which is added to Main Component
@@ -155,6 +155,10 @@ export default function HomeBody() {
                             9876543210</a>
                         </li>
                     </ul>
+                    <h6>Copyright &nbsp;
+                    <FontAwesomeIcon icon={faCopyright} />&nbsp;
+                    2022 &nbsp; Saga. All Rights Reserved
+                    </h6>
                 </div>
                
             </div>
